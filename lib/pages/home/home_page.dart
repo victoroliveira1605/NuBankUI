@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:nubank/pages/home/widgets/item_menu.dart';
+import 'package:nubank/pages/home/widgets/item_menu_bottom.dart';
 import 'package:nubank/pages/home/widgets/menu_app.dart';
 import 'package:nubank/pages/home/widgets/my_app_bar.dart';
 import 'package:nubank/pages/home/widgets/my_dots_app.dart';
@@ -96,6 +98,62 @@ class _HomePageState extends State<HomePage> {
             top: _screenHeight * .70,
             currentIndex: _currentIndex,
           ),
+          AnimatedPositioned(
+            duration: Duration(milliseconds: 200),
+            bottom: !_showMenu ? 0 + MediaQuery.of(context).padding.bottom : 0,
+            left: 0,
+            height: _screenHeight * 0.20,
+            right: 0,
+            child: AnimatedOpacity(
+              duration: Duration(milliseconds: 200),
+              opacity: !_showMenu ? 1 : 0,
+              child: Container(
+                height: 150,
+                child: ListView(
+                  physics: BouncingScrollPhysics(),
+                  scrollDirection: Axis.horizontal,
+                  children: <Widget>[
+                    ItemMenuBottom(
+                      icon: Icons.person_add,
+                      text: 'Indicar amigos',
+                    ),
+                    ItemMenuBottom(
+                      icon: Icons.phone_android,
+                      text: 'Recarga de celular',
+                    ),
+                    ItemMenuBottom(
+                      icon: Icons.chat,
+                      text: 'Cobrar',
+                    ),
+                    ItemMenuBottom(
+                      icon: Icons.monetization_on,
+                      text: 'Empréstimos',
+                    ),
+                    ItemMenuBottom(
+                      icon: Icons.move_to_inbox,
+                      text: 'Depositar',
+                    ),
+                    ItemMenuBottom(
+                      icon: Icons.mobile_screen_share,
+                      text: 'Transferir',
+                    ),
+                    ItemMenuBottom(
+                      icon: Icons.format_align_center,
+                      text: 'Ajustar limite',
+                    ),
+                    ItemMenuBottom(
+                      icon: Icons.chrome_reader_mode,
+                      text: 'Pagar',
+                    ),
+                    ItemMenuBottom(
+                      icon: Icons.lock_open,
+                      text: 'Bloquear cartão',
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          )
         ],
       ),
     );
