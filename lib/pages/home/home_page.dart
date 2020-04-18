@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
       _yPosition = _screenHeight * .24;
     }
     return Scaffold(
-      backgroundColor: Colors.purple[800],
+      backgroundColor: Colors.purple[600],
       body: Stack(
         alignment: Alignment.topCenter,
         children: <Widget>[
@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
               setState(() {
                 _showMenu = !_showMenu;
                 _yPosition =
-                    _showMenu ? _screenHeight * .75 : _screenHeight * .24;
+                    _showMenu ? _screenHeight * .85 : _screenHeight * .24;
               });
             },
           ),
@@ -57,7 +57,7 @@ class _HomePageState extends State<HomePage> {
               });
             },
             onPanUpdate: (details) {
-              double positionBottomLimit = _screenHeight * .75;
+              double positionBottomLimit = _screenHeight * .85;
               double positionTopLimit = _screenHeight * .24;
               double midlePosition = positionBottomLimit - positionTopLimit;
               midlePosition = midlePosition / 2;

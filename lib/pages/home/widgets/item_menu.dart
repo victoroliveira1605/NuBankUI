@@ -9,20 +9,20 @@ class ItemMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 35,
+      height: MediaQuery.of(context).size.height * 0.07,
       decoration: BoxDecoration(
           border: Border(
               bottom: BorderSide(width: 0.7, color: Colors.white54),
               top: BorderSide(width: 0.7, color: Colors.white54))),
       child: RaisedButton(
-        color: Colors.purple[800],
+        color: Colors.purple[600],
         highlightColor: Colors.transparent,
         elevation: 0,
         disabledElevation: 0,
         focusElevation: 0,
         highlightElevation: 0,
         hoverElevation: 0,
-        splashColor: Colors.purple[900],
+        splashColor: Colors.purple[700],
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
@@ -38,7 +38,10 @@ class ItemMenu extends StatelessWidget {
                 ),
               ],
             ),
-            Icon(Icons.chevron_right,size: 16,)
+            Icon(
+              Icons.chevron_right,
+              size: 16,
+            )
           ],
         ),
         onPressed: () {},

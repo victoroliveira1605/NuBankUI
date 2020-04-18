@@ -16,13 +16,13 @@ class MenuApp extends StatelessWidget {
         duration: Duration(milliseconds: 100),
         opacity: showMenu ? 1 : 0,
         child: Container(
-          height: MediaQuery.of(context).size.height * 0.55,
+          height: MediaQuery.of(context).size.height * 0.66,
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
                 Image.network(
                   "https://webmobtuts.com/wp-content/uploads/2019/02/QR_code_for_mobile_English_Wikipedia.svg_.png",
-                  height: 100,
+                  height: 120,
                   color: Colors.white,
                 ),
                 Text.rich(
@@ -60,7 +60,7 @@ class MenuApp extends StatelessWidget {
                 ),
                 SingleChildScrollView(
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 30),
+                    padding: const EdgeInsets.symmetric(horizontal: 26),
                     child: Column(
                       children: <Widget>[
                         ItemMenu(
@@ -91,23 +91,23 @@ class MenuApp extends StatelessWidget {
                           height: 25,
                         ),
                         Container(
-                          height: 35,
+                          height: 40,
                           width: double.infinity,
                           decoration: BoxDecoration(
                               border: Border.all(
                                   width: 0.7, color: Colors.white54)),
                           child: RaisedButton(
-                            color: Colors.purple[800],
+                            color: Colors.purple[600],
                             highlightColor: Colors.transparent,
                             elevation: 0,
                             disabledElevation: 0,
                             focusElevation: 0,
                             highlightElevation: 0,
                             hoverElevation: 0,
-                            splashColor: Colors.purple[900],
+                            splashColor: Colors.purple[700],
                             child: Text(
-                              'SAIR DO APP',
-                              style: TextStyle(fontSize: 10),
+                              'SAIR DA CONTA',
+                              style: TextStyle(fontSize: 16),
                             ),
                             onPressed: () {},
                           ),

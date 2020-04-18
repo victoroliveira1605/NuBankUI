@@ -16,15 +16,18 @@ class ItemMenuBottom extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Icon(icon),
+              Icon(
+                icon,
+                size: 28,
+              ),
               Text(
                 text,
-                style: TextStyle(fontSize: 10),
+                style: TextStyle(fontSize: 12),
               )
             ],
           ),
         ),
-        width: 96,
+        width: MediaQuery.of(context).size.width * 0.26,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(5), color: Colors.white12),
       ),
