@@ -17,7 +17,7 @@ class MyAppBar extends StatelessWidget {
           onTap: onTap,
           child: Container(
             color: Colors.purple[600],
-            height: MediaQuery.of(context).size.height * .20,
+            height: MediaQuery.of(context).size.height * .15,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[

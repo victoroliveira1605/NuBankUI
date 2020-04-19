@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nubank/pages/home/widgets/card_app.dart';
+import 'package:nubank/pages/home/widgets/first_card.dart';
 
 class PageViewApp extends StatelessWidget {
   final double top;
@@ -7,7 +8,8 @@ class PageViewApp extends StatelessWidget {
   final GestureDragUpdateCallback onPanUpdate;
   final bool showMenu;
 
-  const PageViewApp({Key key, this.top, this.onChanged, this.onPanUpdate, this.showMenu})
+  const PageViewApp(
+      {Key key, this.top, this.onChanged, this.onPanUpdate, this.showMenu})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,7 @@ class PageViewApp extends StatelessWidget {
       duration: Duration(milliseconds: 150),
       curve: Curves.easeOut,
       top: top,
-      height: MediaQuery.of(context).size.height * .45,
+      height: MediaQuery.of(context).size.height * .54,
       left: 0,
       right: 0,
       // width: MediaQuery.of(context).size.width,
@@ -23,9 +25,13 @@ class PageViewApp extends StatelessWidget {
         onPanUpdate: onPanUpdate,
         child: PageView(
           onPageChanged: onChanged,
-          physics: showMenu ? NeverScrollableScrollPhysics() : BouncingScrollPhysics(),
+          physics: showMenu
+              ? NeverScrollableScrollPhysics()
+              : BouncingScrollPhysics(),
           children: <Widget>[
-            CardApp(),
+            CardApp(
+              child: FirstCard(),
+            ),
             CardApp(),
             CardApp(),
           ],

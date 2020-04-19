@@ -16,7 +16,7 @@ class MenuApp extends StatelessWidget {
         duration: Duration(milliseconds: 100),
         opacity: showMenu ? 1 : 0,
         child: Container(
-          height: MediaQuery.of(context).size.height * 0.66,
+          height: MediaQuery.of(context).size.height * 0.62,
           child: SingleChildScrollView(
             physics: BouncingScrollPhysics(),
             child: Column(
