@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     double _screenHeight = MediaQuery.of(context).size.height;
     if (_yPosition == null) {
-      _yPosition = _screenHeight * .24;
+      _yPosition = _screenHeight * .20;
     }
     return Scaffold(
       backgroundColor: Colors.purple[600],
@@ -49,6 +49,11 @@ class _HomePageState extends State<HomePage> {
           ),
           BottomMenu(
             showMenu: _showMenu,
+          ),
+          MyDotsApp(
+            showMenu: _showMenu,
+            top: _screenHeight * .78,
+            currentIndex: _currentIndex,
           ),
           PageViewApp(
             showMenu: _showMenu,
@@ -94,11 +99,6 @@ class _HomePageState extends State<HomePage> {
                 }
               });
             },
-          ),
-          MyDotsApp(
-            showMenu: _showMenu,
-            top: _screenHeight * .78,
-            currentIndex: _currentIndex,
           ),
         ],
       ),
