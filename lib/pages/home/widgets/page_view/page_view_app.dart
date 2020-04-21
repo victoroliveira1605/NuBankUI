@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:nubank/pages/home/widgets/cards/card_app.dart';
-import 'package:nubank/pages/home/widgets/cards/first_card.dart';
-import 'package:nubank/pages/home/widgets/cards/second_card.dart';
-import 'package:nubank/pages/home/widgets/cards/third_card.dart';
+import 'package:Nubank/pages/home/widgets/cards/card_app.dart';
+import 'package:Nubank/pages/home/widgets/cards/first_card.dart';
+import 'package:Nubank/pages/home/widgets/cards/second_card.dart';
+import 'package:Nubank/pages/home/widgets/cards/third_card.dart';
 
 class PageViewApp extends StatefulWidget {
   final double top;

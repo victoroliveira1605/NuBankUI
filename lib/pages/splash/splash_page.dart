@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nubank/pages/home/home_page.dart';
+import 'package:Nubank/pages/home/home_page.dart';
 
 class SplashPage extends StatefulWidget {
   @override

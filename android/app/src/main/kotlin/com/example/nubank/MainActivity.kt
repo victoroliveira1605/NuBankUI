@@ -1,4 +1,4 @@
-package com.example.nubank
+package br.com.victorhgo.nubank
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
