@@ -54,8 +54,8 @@ class _SecondCardState extends State<SecondCard>
                                   },
                                   child: SvgPicture.asset(
                                     !_showSaldo
-                                        ? 'assets/icons/visibility_off-24px.svg'
-                                        : 'assets/icons/visibility-24px.svg',
+                                        ? 'assets/icons/eye-off-outline.svg'
+                                        : 'assets/icons/eye-outline.svg',
                                     color: Colors.grey,
                                     semanticsLabel: 'disable_eye',
                                   ),

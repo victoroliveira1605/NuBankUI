@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class FirstCard extends StatelessWidget {
   @override
@@ -143,9 +144,9 @@ class FirstCard extends StatelessWidget {
                 padding: EdgeInsets.only(left: 20, right: 20),
                 child: Row(
                   children: <Widget>[
-                    Icon(
-                      Icons.shopping_cart,
-                      color: Colors.grey,
+                    SvgPicture.asset(
+                      'assets/icons/account-cash-outline.svg',
+                      color: Colors.purple,
                     ),
                     SizedBox(
                       width: 10,
